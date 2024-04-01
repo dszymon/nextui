@@ -1,5 +1,15 @@
 # @nextui-org/skeleton
 
+## 2.0.25
+
+### Patch Changes
+
+- [#2538](https://github.com/nextui-org/nextui/pull/2538) [`0359bf308`](https://github.com/nextui-org/nextui/commit/0359bf3084d9f0fc29bf70505b600dab5e1c5da1) Thanks [@wingkwong](https://github.com/wingkwong)! - Fixed missing disableAnimation behavior in skeleton
+
+- Updated dependencies []:
+  - @nextui-org/system-rsc@2.0.11
+  - @nextui-org/react-utils@2.0.11
+
 ## 2.0.24
 
 ### Patch Changes

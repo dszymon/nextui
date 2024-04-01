@@ -1,5 +1,18 @@
 # @nextui-org/dropdown
 
+## 2.1.18
+
+### Patch Changes
+
+- [#2450](https://github.com/nextui-org/nextui/pull/2450) [`0a9982d3e`](https://github.com/nextui-org/nextui/commit/0a9982d3efe6ac8dfc25438f21598c8fe53de4db) Thanks [@wingkwong](https://github.com/wingkwong)! - fixed getMenuTriggerProps mergeProps (#2448)
+
+- [#2458](https://github.com/nextui-org/nextui/pull/2458) [`7263daca0`](https://github.com/nextui-org/nextui/commit/7263daca08674338eb28529315070337ba0dfc17) Thanks [@wingkwong](https://github.com/wingkwong)! - fix(autocomplete): support isReadOnly for dynamic collections in Autocomplete
+
+- Updated dependencies [[`a05aef0ac`](https://github.com/nextui-org/nextui/commit/a05aef0acb5a7b000c8131e8ba4f50f0adec01e5), [`2b9f89023`](https://github.com/nextui-org/nextui/commit/2b9f89023ac087016083dcc205703ae1b2bc9cb8), [`8761168d3`](https://github.com/nextui-org/nextui/commit/8761168d3459cd83ce571f4e65eb8ea6db8516ef), [`eb51bf226`](https://github.com/nextui-org/nextui/commit/eb51bf226170e4bb37ae30990d1c3aa26d8c504b), [`7263daca0`](https://github.com/nextui-org/nextui/commit/7263daca08674338eb28529315070337ba0dfc17), [`2894aecca`](https://github.com/nextui-org/nextui/commit/2894aecca1a2ef0dfb3066b9b8df24ce48c99dae)]:
+  - @nextui-org/popover@2.1.16
+  - @nextui-org/menu@2.0.18
+  - @nextui-org/react-utils@2.0.11
+
 ## 2.1.17
 
 ### Patch Changes

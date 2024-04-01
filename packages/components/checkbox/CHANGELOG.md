@@ -1,5 +1,16 @@
 # @nextui-org/checkbox
 
+## 2.0.26
+
+### Patch Changes
+
+- [#2595](https://github.com/nextui-org/nextui/pull/2595) [`ef6ea6c1f`](https://github.com/nextui-org/nextui/commit/ef6ea6c1ffb57cd30f8994143a48b70f8ad2adeb) Thanks [@wingkwong](https://github.com/wingkwong)! - Fixed incorrect onChange typing in Checkbox Group
+
+- [#2466](https://github.com/nextui-org/nextui/pull/2466) [`e4b3c7d1a`](https://github.com/nextui-org/nextui/commit/e4b3c7d1a19bc31c1f69c90a5b467bf8310602dc) Thanks [@mrbadri](https://github.com/mrbadri)! - Add RTL support to the checkbox component
+
+- Updated dependencies []:
+  - @nextui-org/react-utils@2.0.11
+
 ## 2.0.25
 
 ### Patch Changes
