@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
 
 interface Props {
   isSelected?: boolean;
@@ -11,7 +11,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  isSelected: false,
+  isSelected: undefined,
   isDisabled: false,
   size: 'md',
   color: 'primary'
@@ -19,26 +19,47 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits<{
   (e: 'update:isSelected', value: boolean): void;
-  (e: 'change', value: string): void; // usually radio group handles this
+  (e: 'change', value: string): void;
 }>();
+
+const groupContext = inject('radioGroup', null) as any;
+
+const isChecked = computed(() => {
+    if (groupContext) {
+        return groupContext.modelValue.value === props.value;
+    }
+    return props.isSelected;
+});
+
+const isDisabledComputed = computed(() => {
+    if (groupContext && groupContext.isDisabled.value) return true;
+    return props.isDisabled;
+});
+
+const sizeComputed = computed(() => groupContext?.size.value || props.size);
+const colorComputed = computed(() => groupContext?.color.value || props.color);
 
 const classes = computed(() => {
   return [
     'heroui-radio',
-    `heroui-radio-${props.size}`,
-    `heroui-radio-${props.color}`,
+    `heroui-radio-${sizeComputed.value}`,
+    `heroui-radio-${colorComputed.value}`,
     {
-      'heroui-radio-disabled': props.isDisabled,
-      'heroui-radio-selected': props.isSelected
+      'heroui-radio-disabled': isDisabledComputed.value,
+      'heroui-radio-selected': isChecked.value
     }
   ];
 });
 
 const handleChange = () => {
-  if (props.isDisabled) return;
-  // Radio usually works in a group, but standalone it can toggle or be set
-  emit('update:isSelected', true);
-  if (props.value) emit('change', props.value);
+  if (isDisabledComputed.value) return;
+
+  if (groupContext) {
+      groupContext.updateValue(props.value);
+  } else {
+      emit('update:isSelected', true);
+      if (props.value) emit('change', props.value);
+  }
 };
 </script>
 
@@ -47,8 +68,8 @@ const handleChange = () => {
     <input
       type="radio"
       class="heroui-radio-input"
-      :checked="isSelected"
-      :disabled="isDisabled"
+      :checked="isChecked"
+      :disabled="isDisabledComputed"
       :value="value"
       @change="handleChange"
     />

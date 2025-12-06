@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
 
 interface Props {
   isSelected?: boolean;
@@ -16,7 +16,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  isSelected: false,
+  isSelected: undefined,
   isIndeterminate: false,
   isDisabled: false,
   isReadOnly: false,
@@ -31,15 +31,30 @@ const emit = defineEmits<{
   (e: 'change', value: boolean): void;
 }>();
 
+const groupContext = inject('checkboxGroup', null) as any;
+
+const isChecked = computed(() => {
+    if (groupContext && props.value) {
+        return groupContext.modelValue.value.includes(props.value);
+    }
+    return props.isSelected;
+});
+
+const isDisabledComputed = computed(() => groupContext?.isDisabled.value || props.isDisabled);
+const isReadOnlyComputed = computed(() => groupContext?.isReadOnly.value || props.isReadOnly);
+const sizeComputed = computed(() => groupContext?.size.value || props.size);
+const colorComputed = computed(() => groupContext?.color.value || props.color);
+const lineThroughComputed = computed(() => groupContext?.lineThrough.value || props.lineThrough);
+
 const classes = computed(() => {
   return [
     'heroui-checkbox',
-    `heroui-checkbox-${props.size}`,
-    `heroui-checkbox-${props.color}`,
+    `heroui-checkbox-${sizeComputed.value}`,
+    `heroui-checkbox-${colorComputed.value}`,
     `heroui-checkbox-radius-${props.radius}`,
     {
-      'heroui-checkbox-disabled': props.isDisabled,
-      'heroui-checkbox-checked': props.isSelected,
+      'heroui-checkbox-disabled': isDisabledComputed.value,
+      'heroui-checkbox-checked': isChecked.value,
       'heroui-checkbox-indeterminate': props.isIndeterminate
     }
   ];
@@ -49,16 +64,21 @@ const labelClasses = computed(() => {
     return [
         'heroui-checkbox-label',
         {
-            'heroui-checkbox-label-line-through': props.lineThrough && props.isSelected
+            'heroui-checkbox-label-line-through': lineThroughComputed.value && isChecked.value
         }
     ]
 });
 
 const handleChange = (event: Event) => {
-  if (props.isDisabled || props.isReadOnly) return;
+  if (isDisabledComputed.value || isReadOnlyComputed.value) return;
   const target = event.target as HTMLInputElement;
-  emit('update:isSelected', target.checked);
-  emit('change', target.checked);
+
+  if (groupContext && props.value) {
+      groupContext.updateValue(props.value);
+  } else {
+      emit('update:isSelected', target.checked);
+      emit('change', target.checked);
+  }
 };
 </script>
 
@@ -67,10 +87,10 @@ const handleChange = (event: Event) => {
     <input
       type="checkbox"
       class="heroui-checkbox-input"
-      :checked="isSelected"
+      :checked="isChecked"
       :indeterminate="isIndeterminate"
-      :disabled="isDisabled"
-      :readonly="isReadOnly"
+      :disabled="isDisabledComputed"
+      :readonly="isReadOnlyComputed"
       :name="name"
       :required="required"
       @change="handleChange"
