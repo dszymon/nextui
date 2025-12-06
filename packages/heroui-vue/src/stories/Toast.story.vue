@@ -4,9 +4,11 @@ import ToastProvider from '../components/toast/ToastProvider.vue';
 import Button from '../components/button/Button.vue';
 import { ref } from 'vue';
 
-const toasts = ref<{ id: number; title: string; color: string }[]>([]);
+type ToastColor = 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
 
-const addToast = (color: string) => {
+const toasts = ref<{ id: number; title: string; color: ToastColor }[]>([]);
+
+const addToast = (color: ToastColor) => {
     toasts.value.push({
         id: Date.now(),
         title: 'Notification',
