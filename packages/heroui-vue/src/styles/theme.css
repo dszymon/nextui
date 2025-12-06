@@ -1,0 +1,300 @@
+:root {
+  /* =========================================
+     Common Colors (Palette)
+     ========================================= */
+  --heroui-white: #ffffff;
+  --heroui-black: #000000;
+
+  /* Zinc */
+  --heroui-zinc-50: #fafafa;
+  --heroui-zinc-100: #f4f4f5;
+  --heroui-zinc-200: #e4e4e7;
+  --heroui-zinc-300: #d4d4d8;
+  --heroui-zinc-400: #a1a1aa;
+  --heroui-zinc-500: #71717a;
+  --heroui-zinc-600: #52525b;
+  --heroui-zinc-700: #3f3f46;
+  --heroui-zinc-800: #27272a;
+  --heroui-zinc-900: #18181b;
+
+  /* Blue */
+  --heroui-blue-50: #e6f1fe;
+  --heroui-blue-100: #cce3fd;
+  --heroui-blue-200: #99c7fb;
+  --heroui-blue-300: #66aaf9;
+  --heroui-blue-400: #338ef7;
+  --heroui-blue-500: #006FEE;
+  --heroui-blue-600: #005bc4;
+  --heroui-blue-700: #004493;
+  --heroui-blue-800: #002e62;
+  --heroui-blue-900: #001731;
+
+  /* Purple */
+  --heroui-purple-50: #f2eafa;
+  --heroui-purple-100: #e4d4f4;
+  --heroui-purple-200: #c9a9e9;
+  --heroui-purple-300: #ae7ede;
+  --heroui-purple-400: #9353d3;
+  --heroui-purple-500: #7828c8;
+  --heroui-purple-600: #6020a0;
+  --heroui-purple-700: #481878;
+  --heroui-purple-800: #301050;
+  --heroui-purple-900: #180828;
+
+  /* Green */
+  --heroui-green-50: #e8faf0;
+  --heroui-green-100: #d1f4e0;
+  --heroui-green-200: #a2e9c1;
+  --heroui-green-300: #74dfa2;
+  --heroui-green-400: #45d483;
+  --heroui-green-500: #17c964;
+  --heroui-green-600: #12a150;
+  --heroui-green-700: #0e793c;
+  --heroui-green-800: #095028;
+  --heroui-green-900: #052814;
+
+  /* Yellow */
+  --heroui-yellow-50: #fefce8;
+  --heroui-yellow-100: #fdedd3;
+  --heroui-yellow-200: #fbdba7;
+  --heroui-yellow-300: #f9c97c;
+  --heroui-yellow-400: #f7b750;
+  --heroui-yellow-500: #f5a524;
+  --heroui-yellow-600: #c4841d;
+  --heroui-yellow-700: #936316;
+  --heroui-yellow-800: #62420e;
+  --heroui-yellow-900: #312107;
+
+  /* Red */
+  --heroui-red-50: #fee7ef;
+  --heroui-red-100: #fdd0df;
+  --heroui-red-200: #faa0bf;
+  --heroui-red-300: #f871a0;
+  --heroui-red-400: #f54180;
+  --heroui-red-500: #f31260;
+  --heroui-red-600: #c20e4d;
+  --heroui-red-700: #920b3a;
+  --heroui-red-800: #610726;
+  --heroui-red-900: #310413;
+
+  /* Cyan (Added based on imports seen in common.ts) */
+  --heroui-cyan-50: #ecfeff;
+  --heroui-cyan-100: #cffafe;
+  --heroui-cyan-200: #a5f3fc;
+  --heroui-cyan-300: #67e8f9;
+  --heroui-cyan-400: #22d3ee;
+  --heroui-cyan-500: #06b6d4;
+  --heroui-cyan-600: #0891b2;
+  --heroui-cyan-700: #0e7490;
+  --heroui-cyan-800: #155e75;
+  --heroui-cyan-900: #164e63;
+
+  /* Pink (Added based on imports seen in common.ts) */
+  --heroui-pink-50: #fdf2f8;
+  --heroui-pink-100: #fce7f3;
+  --heroui-pink-200: #fbcfe8;
+  --heroui-pink-300: #f9a8d4;
+  --heroui-pink-400: #f472b6;
+  --heroui-pink-500: #ec4899;
+  --heroui-pink-600: #db2777;
+  --heroui-pink-700: #be185d;
+  --heroui-pink-800: #9d174d;
+  --heroui-pink-900: #831843;
+
+
+  /* =========================================
+     Semantic Colors - LIGHT (Default)
+     ========================================= */
+
+  --heroui-background: #FFFFFF;
+  --heroui-foreground: #11181C;
+  --heroui-divider: rgba(17, 17, 17, 0.15);
+  --heroui-focus: var(--heroui-blue-500);
+  --heroui-overlay: #000000;
+
+  /* Default (Zinc) */
+  --heroui-default-50: var(--heroui-zinc-50);
+  --heroui-default-100: var(--heroui-zinc-100);
+  --heroui-default-200: var(--heroui-zinc-200);
+  --heroui-default-300: var(--heroui-zinc-300);
+  --heroui-default-400: var(--heroui-zinc-400);
+  --heroui-default-500: var(--heroui-zinc-500);
+  --heroui-default-600: var(--heroui-zinc-600);
+  --heroui-default-700: var(--heroui-zinc-700);
+  --heroui-default-800: var(--heroui-zinc-800);
+  --heroui-default-900: var(--heroui-zinc-900);
+  --heroui-default: var(--heroui-zinc-300);
+  --heroui-default-foreground: #000000;
+
+  /* Primary (Blue) */
+  --heroui-primary-50: var(--heroui-blue-50);
+  --heroui-primary-100: var(--heroui-blue-100);
+  --heroui-primary-200: var(--heroui-blue-200);
+  --heroui-primary-300: var(--heroui-blue-300);
+  --heroui-primary-400: var(--heroui-blue-400);
+  --heroui-primary-500: var(--heroui-blue-500);
+  --heroui-primary-600: var(--heroui-blue-600);
+  --heroui-primary-700: var(--heroui-blue-700);
+  --heroui-primary-800: var(--heroui-blue-800);
+  --heroui-primary-900: var(--heroui-blue-900);
+  --heroui-primary: var(--heroui-blue-500);
+  --heroui-primary-foreground: #FFFFFF;
+
+  /* Secondary (Purple) */
+  --heroui-secondary-50: var(--heroui-purple-50);
+  --heroui-secondary-100: var(--heroui-purple-100);
+  --heroui-secondary-200: var(--heroui-purple-200);
+  --heroui-secondary-300: var(--heroui-purple-300);
+  --heroui-secondary-400: var(--heroui-purple-400);
+  --heroui-secondary-500: var(--heroui-purple-500);
+  --heroui-secondary-600: var(--heroui-purple-600);
+  --heroui-secondary-700: var(--heroui-purple-700);
+  --heroui-secondary-800: var(--heroui-purple-800);
+  --heroui-secondary-900: var(--heroui-purple-900);
+  --heroui-secondary: var(--heroui-purple-500);
+  --heroui-secondary-foreground: #FFFFFF;
+
+  /* Success (Green) */
+  --heroui-success-50: var(--heroui-green-50);
+  --heroui-success-100: var(--heroui-green-100);
+  --heroui-success-200: var(--heroui-green-200);
+  --heroui-success-300: var(--heroui-green-300);
+  --heroui-success-400: var(--heroui-green-400);
+  --heroui-success-500: var(--heroui-green-500);
+  --heroui-success-600: var(--heroui-green-600);
+  --heroui-success-700: var(--heroui-green-700);
+  --heroui-success-800: var(--heroui-green-800);
+  --heroui-success-900: var(--heroui-green-900);
+  --heroui-success: var(--heroui-green-500);
+  --heroui-success-foreground: #FFFFFF;
+
+  /* Warning (Yellow) */
+  --heroui-warning-50: var(--heroui-yellow-50);
+  --heroui-warning-100: var(--heroui-yellow-100);
+  --heroui-warning-200: var(--heroui-yellow-200);
+  --heroui-warning-300: var(--heroui-yellow-300);
+  --heroui-warning-400: var(--heroui-yellow-400);
+  --heroui-warning-500: var(--heroui-yellow-500);
+  --heroui-warning-600: var(--heroui-yellow-600);
+  --heroui-warning-700: var(--heroui-yellow-700);
+  --heroui-warning-800: var(--heroui-yellow-800);
+  --heroui-warning-900: var(--heroui-yellow-900);
+  --heroui-warning: var(--heroui-yellow-500);
+  --heroui-warning-foreground: #000000;
+
+  /* Danger (Red) */
+  --heroui-danger-50: var(--heroui-red-50);
+  --heroui-danger-100: var(--heroui-red-100);
+  --heroui-danger-200: var(--heroui-red-200);
+  --heroui-danger-300: var(--heroui-red-300);
+  --heroui-danger-400: var(--heroui-red-400);
+  --heroui-danger-500: var(--heroui-red-500);
+  --heroui-danger-600: var(--heroui-red-600);
+  --heroui-danger-700: var(--heroui-red-700);
+  --heroui-danger-800: var(--heroui-red-800);
+  --heroui-danger-900: var(--heroui-red-900);
+  --heroui-danger: var(--heroui-red-500);
+  --heroui-danger-foreground: #FFFFFF;
+
+  /* Radii */
+  --heroui-radius-small: 8px;
+  --heroui-radius-medium: 12px;
+  --heroui-radius-large: 14px;
+}
+
+/* =========================================
+   Semantic Colors - DARK
+   ========================================= */
+[data-theme="dark"] {
+  --heroui-background: #000000;
+  --heroui-foreground: #ECEDEE;
+  --heroui-divider: rgba(255, 255, 255, 0.15);
+  --heroui-overlay: #ffffff;
+
+  /* Default (Zinc - Inverted) */
+  --heroui-default-50: var(--heroui-zinc-900);
+  --heroui-default-100: var(--heroui-zinc-800);
+  --heroui-default-200: var(--heroui-zinc-700);
+  --heroui-default-300: var(--heroui-zinc-600);
+  --heroui-default-400: var(--heroui-zinc-500);
+  --heroui-default-500: var(--heroui-zinc-400);
+  --heroui-default-600: var(--heroui-zinc-300);
+  --heroui-default-700: var(--heroui-zinc-200);
+  --heroui-default-800: var(--heroui-zinc-100);
+  --heroui-default-900: var(--heroui-zinc-50);
+  --heroui-default: var(--heroui-zinc-700);
+  --heroui-default-foreground: #FFFFFF;
+
+  /* Primary (Blue - Inverted) */
+  --heroui-primary-50: var(--heroui-blue-900);
+  --heroui-primary-100: var(--heroui-blue-800);
+  --heroui-primary-200: var(--heroui-blue-700);
+  --heroui-primary-300: var(--heroui-blue-600);
+  --heroui-primary-400: var(--heroui-blue-500);
+  --heroui-primary-500: var(--heroui-blue-400); // Usually primary stays roughly same or shifts slightly, but swap implies inversion.
+                                                  // However, common.blue[500] is the brand color.
+                                                  // If we swap strictly: 50<->900, 100<->800, 200<->700, 300<->600, 400<->500.
+                                                  // So primary-500 becomes blue-400.
+  --heroui-primary-600: var(--heroui-blue-300);
+  --heroui-primary-700: var(--heroui-blue-200);
+  --heroui-primary-800: var(--heroui-blue-100);
+  --heroui-primary-900: var(--heroui-blue-50);
+  --heroui-primary: var(--heroui-blue-500); // Keep brand color or use 400 for better contrast? React usually keeps it or adapts slightly.
+  --heroui-primary-foreground: #FFFFFF;
+
+  /* Secondary (Purple - Inverted) */
+  --heroui-secondary-50: var(--heroui-purple-900);
+  --heroui-secondary-100: var(--heroui-purple-800);
+  --heroui-secondary-200: var(--heroui-purple-700);
+  --heroui-secondary-300: var(--heroui-purple-600);
+  --heroui-secondary-400: var(--heroui-purple-500);
+  --heroui-secondary-500: var(--heroui-purple-400);
+  --heroui-secondary-600: var(--heroui-purple-300);
+  --heroui-secondary-700: var(--heroui-purple-200);
+  --heroui-secondary-800: var(--heroui-purple-100);
+  --heroui-secondary-900: var(--heroui-purple-50);
+  --heroui-secondary: var(--heroui-purple-400);
+  --heroui-secondary-foreground: #FFFFFF;
+
+  /* Success (Green - Inverted) */
+  --heroui-success-50: var(--heroui-green-900);
+  --heroui-success-100: var(--heroui-green-800);
+  --heroui-success-200: var(--heroui-green-700);
+  --heroui-success-300: var(--heroui-green-600);
+  --heroui-success-400: var(--heroui-green-500);
+  --heroui-success-500: var(--heroui-green-400);
+  --heroui-success-600: var(--heroui-green-300);
+  --heroui-success-700: var(--heroui-green-200);
+  --heroui-success-800: var(--heroui-green-100);
+  --heroui-success-900: var(--heroui-green-50);
+  --heroui-success: var(--heroui-green-500); // or 400
+  --heroui-success-foreground: #FFFFFF;
+
+  /* Warning (Yellow - Inverted) */
+  --heroui-warning-50: var(--heroui-yellow-900);
+  --heroui-warning-100: var(--heroui-yellow-800);
+  --heroui-warning-200: var(--heroui-yellow-700);
+  --heroui-warning-300: var(--heroui-yellow-600);
+  --heroui-warning-400: var(--heroui-yellow-500);
+  --heroui-warning-500: var(--heroui-yellow-400);
+  --heroui-warning-600: var(--heroui-yellow-300);
+  --heroui-warning-700: var(--heroui-yellow-200);
+  --heroui-warning-800: var(--heroui-yellow-100);
+  --heroui-warning-900: var(--heroui-yellow-50);
+  --heroui-warning: var(--heroui-yellow-500); // or 400
+  --heroui-warning-foreground: #000000;
+
+  /* Danger (Red - Inverted) */
+  --heroui-danger-50: var(--heroui-red-900);
+  --heroui-danger-100: var(--heroui-red-800);
+  --heroui-danger-200: var(--heroui-red-700);
+  --heroui-danger-300: var(--heroui-red-600);
+  --heroui-danger-400: var(--heroui-red-500);
+  --heroui-danger-500: var(--heroui-red-400);
+  --heroui-danger-600: var(--heroui-red-300);
+  --heroui-danger-700: var(--heroui-red-200);
+  --heroui-danger-800: var(--heroui-red-100);
+  --heroui-danger-900: var(--heroui-red-50);
+  --heroui-danger: var(--heroui-red-500); // or 400
+  --heroui-danger-foreground: #FFFFFF;
+}

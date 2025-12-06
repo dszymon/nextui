@@ -1,0 +1,35 @@
+{
+  "name": "@heroui/vue",
+  "version": "0.0.1",
+  "description": "HeroUI Vue components",
+  "main": "dist/heroui-vue.umd.js",
+  "module": "dist/heroui-vue.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "test": "vitest",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@histoire/plugin-vue": "1.0.0-alpha.5",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/test-utils": "^2.4.0",
+    "happy-dom": "^12.0.0",
+    "histoire": "1.0.0-alpha.5",
+    "stylus": "github:dszymon/stylus-modern-css",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^1.0.0",
+    "vue": "^3.4.0",
+    "vue-tsc": "^2.0.0"
+  }
+}
